@@ -25,22 +25,18 @@ export class List {
 		for(var i = 0; i < this.getLength(); i++) {
 		    if(this._contentArray[i].id === index) {
 			return `
-			<div id="cardData" class="cardData bg-light m-5">
+			<div id="cardData" class="card bg-light m-5">
 				<img src="${this._contentArray[index].imagelink}" class="cardData-img-top" alt="img">
-					<div class="cardData-body">
-						<h2 class="mb-3 cardData-title">Title - <i>${this._contentArray[index].title}</i></h2>
-						<h3 class="mb-3 cardData-text">Type - <i>${this._contentArray[index].type}</i></h3>
-                        <h3 class="mb-3 cardData-text">Author - <i>${this._contentArray[index].author}</i></h3>
-						<p class="mb-3 cardData-text">Body - <i>${this._contentArray[index].body}</i></p>
+					<div class="card-body">
+						<h2 class="mb-3 cardData-title">Title - ${this._contentArray[index].title}</h2>
+						<h3 class="mb-3 cardData-text">Type - ${this._contentArray[index].type}</h3>
+                        <h3 class="mb-3 cardData-text">Author - ${this._contentArray[index].author}</h3>
+						<p class="mb-3 cardData-text">Body - ${this._contentArray[index].body}</p>
 					</div>
 			</div>`
 		    }
 		}
-		return this.htmlErrorMethod(index)
-	    }
-
-	htmlErrorMethod(index:number)
-	{
 		return `<div class="text-center">There is no data stored: ${index} wants to access</div>`;
 	}
+
 }
