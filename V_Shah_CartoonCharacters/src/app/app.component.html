@@ -5,11 +5,10 @@
 </nav>
 
 <div class="container my-3">
-	<span [innerHTML]="this.content.getOutput(0)"></span>
-	<span [innerHTML]="this.content.getOutput(1)"></span>
-	<span [innerHTML]="this.content.getOutput(2)"></span>
-	<span [innerHTML]="this.content.getOutput(3)"></span>
+	<span [innerHTML]="this.content.getData(0)"></span>
+	<span [innerHTML]="this.content.getData(1)"></span>
+	<span [innerHTML]="this.content.getData(2)"></span>
+	<span [innerHTML]="this.content.getData(3)"></span>
 
-	<!-- intentionally try to access undefined data - to display error message. -->
-	<span [innerHTML]="this.content.getOutput(4)"></span>
+	<span [innerHTML]="this.content.getData(4)"></span>
 </div>

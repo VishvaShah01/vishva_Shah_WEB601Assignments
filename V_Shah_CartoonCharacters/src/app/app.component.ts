@@ -1,4 +1,3 @@
-
 import { Component } from '@angular/core';
 import {Content} from './models/content';
 import {List} from './models/list'
@@ -9,12 +8,10 @@ import {List} from './models/list'
 })
 export class AppComponent {
   title = 'V_Shah_CartoonCharacters';
-
   firstCharacter: Content;
   secondCharacter: Content;
   thirdCharacter: Content;
-  fourthCharacter: Content;
-  
+  fourthCharacter: Content; 
   content: List = new List;
 
   constructor() {
@@ -53,12 +50,10 @@ export class AppComponent {
       imagelink: 'https://2.bp.blogspot.com/-ZI0ab75-9yM/WpW3wO_gM2I/AAAAAAAA4AQ/ct1KqUz-A4ULjo3QjbSXqVReV8Y84wDjQCLcBGAs/s1600/thomas-and-friends-season-21-keyart_landscape_no-logo-nickelodeon-usa-press-nick-jr.jpg',
       type: 'Comedy',
       hashtag: ['Thomas']
-    }
-        
+    } 
         this.content.addContent(this.firstCharacter);
         this.content.addContent(this.secondCharacter);
         this.content.addContent(this.thirdCharacter);
         this.content.addContent(this.fourthCharacter);
   }
-
 }
