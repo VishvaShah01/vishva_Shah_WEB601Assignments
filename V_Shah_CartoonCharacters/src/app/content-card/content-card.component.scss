@@ -1,0 +1,45 @@
+:host {
+    width: 400px;
+    padding: 8px;
+    text-align: center;
+    font-weight: bold;
+    display: block;
+    border: 2px solid black;
+    margin: 8px auto;
+    background-color:lightblue;
+
+    .body {  
+        border-style: solid;
+        padding: 4px;
+        background-color:darksalmon;
+        margin-top: 5px;  
+    }
+    
+    img {
+        width: 23em;
+        border: 3px solid black;
+    }
+    
+    .type {
+        border-style: solid;
+        border-width: 3px;
+        background-color:lightgoldenrodyellow;
+        padding: 10px;
+    }
+    
+    .author {
+        background-color:rosybrown;
+        border-style: solid;
+        border-width: 2px;
+        padding: 8px;
+        margin-top: 2px;
+    }
+    
+    .hashtag {
+        border-style: solid;
+        border-width: 2px;
+        padding: 8px;
+        margin-top: 2px;
+        background-color:burlywood;
+    }
+}
