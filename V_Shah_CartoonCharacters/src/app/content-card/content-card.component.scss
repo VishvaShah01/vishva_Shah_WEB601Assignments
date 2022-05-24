@@ -42,4 +42,11 @@
         margin-top: 2px;
         background-color:burlywood;
     }
+    &.is-even {
+        background-color: rgb(160, 143, 143);
+    }
+    
+    &.is-odd{
+       background-color: rgb(255, 255, 255);
+       }
 }
