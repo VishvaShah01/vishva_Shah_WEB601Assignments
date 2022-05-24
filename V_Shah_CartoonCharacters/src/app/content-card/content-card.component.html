@@ -1,1 +1,14 @@
-<p>content-card works!</p>
+<h2 *ngIf="cartoon && cartoon.title else elseBlockNameIsWhateverYouWant">
+    {{cartoon?.title }}
+</h2>
+
+<img *ngIf="cartoon && cartoon.imagelink else elseBlockNameIsWhateverYouWant" [src]="cartoon.imagelink" (click)="mycartoons()">
+<p class="body" *ngIf="cartoon && cartoon.body; else elseBlockNameIsWhateverYouWant">{{cartoon?.body}}</p>
+
+<div class="type"  *ngIf="cartoon && cartoon.type else elseBlockNameIsWhateverYouWant">{{cartoon?.type}}</div>
+<div class="author"  *ngIf="cartoon && cartoon.author else elseBlockNameIsWhateverYouWant">{{cartoon?.author}}</div>
+<div class="hashtag"  *ngIf="cartoon && cartoon.hashtag else elseBlockNameIsWhateverYouWant">{{cartoon?.hashtag}}</div>
+
+<ng-template #elseBlockNameIsWhateverYouWant>
+<p class="nothing-found">Nothing to show</p>
+</ng-template>

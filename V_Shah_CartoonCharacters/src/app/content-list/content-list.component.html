@@ -1,1 +1,6 @@
-<p>content-list works!</p>
+<h2 class="title">Cartoons</h2>
+<div>
+    <app-content-card *ngFor="let item of cartooncharacters; index as i; first as isFirst;" [cartoon]="item"
+      class="stranger-{{i+1}}">
+    </app-content-card>
+</div>

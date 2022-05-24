@@ -1,4 +1,5 @@
-import { Component, OnInit } from '@angular/core';
+import { Component,Input, OnInit } from '@angular/core';
+import {Content} from '../models/content';
 
 @Component({
   selector: 'app-content-card',
@@ -6,8 +7,20 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./content-card.component.css']
 })
 export class ContentCardComponent implements OnInit {
+  @Input() cartoon?: Content;
+  static Count = 0;
+  private char: Content[];
 
-  constructor() { }
+  constructor() {
+    this.char = []; 
+  }
+  get characters():Content[] {
+    return this.char;
+  }
+  mycartoons(){
+    console.log(this.cartoon?.id);
+    console.log(this.cartoon?.author);
+  }
 
   ngOnInit(): void {
   }
