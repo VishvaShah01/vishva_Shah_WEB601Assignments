@@ -1,6 +1,14 @@
 <h2 class="title">Cartoons</h2>
-<div>
+<!--<div>
     <app-content-card *ngFor="let item of cartooncharacters; index as i; first as isFirst; odd as odd; even as even;" [cartoon]="item"
       class="cartoon-{{i+1}}" [class.is-odd]="odd" [class.is-even]="even">
-    </app-content-card>
+    </app-content-card>  
+</div>-->
+
+<!--Assignment 3-->
+<div *ngFor="let item of (cartooncharacters | cartoons); index as i; first as isFirst; odd as odd; even as even;">
+  <app-content-card *ngIf="item.type=='Comedy'" [cartoon]="item" 
+  class="chess-player-{{i}}">
+</app-content-card>
 </div>
+

@@ -44,7 +44,7 @@ export class ContentListComponent implements OnInit {
       body: "Thomas & Friends (originally known as Thomas the Tank Engine & Friends and later Thomas the Tank Engine and Thomas & Friends: Big World! Big Adventures!) is a British children's television series created by Reverend W. Awdry and Britt Allcroft that aired across 24 series between 1984 to 2021.",
       author: 'Britt Allcroft',
       imagelink: 'https://2.bp.blogspot.com/-ZI0ab75-9yM/WpW3wO_gM2I/AAAAAAAA4AQ/ct1KqUz-A4ULjo3QjbSXqVReV8Y84wDjQCLcBGAs/s1600/thomas-and-friends-season-21-keyart_landscape_no-logo-nickelodeon-usa-press-nick-jr.jpg',
-      type: 'Comedy',
+      type: 'Child',
       hashtag: ['Thomas']
     },
     {
@@ -53,7 +53,7 @@ export class ContentListComponent implements OnInit {
       body: 'Tom and Jerry is an American animated media franchise and series of comedy short films created in 1940 by William Hanna and Joseph Barbera. Best known for its 161 theatrical short films by Metro-Goldwyn-Mayer, the series centers on the rivalry between the titular characters of a cat named Tom and a mouse named Jerry. Many shorts also feature several recurring characters.',
       author: 'William Hanna',
       imagelink:'http://3.bp.blogspot.com/-GXjhWVhovBM/TwQfW6PNBeI/AAAAAAAAIbs/iFRur1qJgrA/s1600/Tom-and-Jerry+12.jpg',
-      type: 'Comedy',
+      type: 'Child',
       hashtag: ['Cat and Mouse']
     },
     {
