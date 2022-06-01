@@ -55,6 +55,24 @@ export class ContentListComponent implements OnInit {
       imagelink:'http://3.bp.blogspot.com/-GXjhWVhovBM/TwQfW6PNBeI/AAAAAAAAIbs/iFRur1qJgrA/s1600/Tom-and-Jerry+12.jpg',
       type: 'Comedy',
       hashtag: ['Cat and Mouse']
+    },
+    {
+      id: 5,
+      title: 'Mr Bean',
+      body: 'Mr. Bean is a British sitcom created by Rowan Atkinson and Richard Curtis, produced by Tiger Aspect and starring Atkinson as the title character.',
+      author: 'Rowan Atkinson and Richard Curtis',
+      imagelink:'https://static1.thegamerimages.com/wordpress/wp-content/uploads/2022/05/BeaNFT.jpg?q=50&fit=contain&w=750&h=375&dpr=1.5',
+      type: '',
+      hashtag: ['Mr Bean'] 
+    },
+    {
+      id: 6,
+      title: 'Doraemon',
+      body: 'Doraemon is a Japanese manga series written and illustrated by Fujiko F. Fujio.',
+      author: ' Fujiko F. Fujio',
+      imagelink:'https://images.fineartamerica.com/images/artworkimages/mediumlarge/1/doremon-anwar.jpg',
+      type: '',
+      hashtag: ['Doraemon'] 
     }
     ]
   }
