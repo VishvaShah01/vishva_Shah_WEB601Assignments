@@ -9,21 +9,21 @@
 <h2 class="heading">Comedy</h2>
 <div *ngFor="let item of (cartooncharacters | cartoons); index as i; first as isFirst; odd as odd; even as even;">
   <app-content-card *ngIf="item.type=='Comedy'" [cartoon]="item" 
-  class="chess-player-{{i}}">
+  class="chess-player-{{i}}" class="CartoonComedy">
 </app-content-card>
 </div>
 
 <h2 class="heading">Child</h2>
 <div *ngFor="let item of (cartooncharacters | cartoons); index as i; first as isFirst; odd as odd; even as even;">
   <app-content-card *ngIf="item.type=='Child'" [cartoon]="item" 
-  class="chess-player-{{i}}">
+  class="chess-player-{{i}}" class="CartoonChild">
 </app-content-card>
 </div>
 
 <h2 class="heading">Blank data</h2>
 <div *ngFor="let item of (cartooncharacters | cartoons); index as i; first as isFirst; odd as odd; even as even;">
   <app-content-card *ngIf="item.type==''" [cartoon]="item" 
-  class="chess-player-{{i}}">
+  class="chess-player-{{i}}" class="CartoonBlank">
 </app-content-card>
 </div>
 
