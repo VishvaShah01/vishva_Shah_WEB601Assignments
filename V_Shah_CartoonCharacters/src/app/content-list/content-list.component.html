@@ -6,6 +6,18 @@
 </div>-->
 
 <!--Assignment 3-->
+
+<div><label>
+  Author name search:
+  <input autofocus #authorToSearchFor>
+</label>
+<button (click)="checkForAuthorInList(authorToSearchFor.value)">Check for Author</button>
+</div>
+<div class="author-error" [style]="authorSearchMessage.found ? 'color: blue' : 'color: grey'">
+{{ authorSearchMessage.message }}
+</div>
+
+
 <h2 class="heading">Comedy</h2>
 <div *ngFor="let item of (cartooncharacters | cartoons); index as i; first as isFirst; odd as odd; even as even;">
   <app-content-card *ngIf="item.type=='Comedy'" [cartoon]="item" 

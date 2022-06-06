@@ -6,7 +6,14 @@ import { Content } from '../models/content';
   templateUrl: './content-list.component.html',
   styleUrls: ['./content-list.component.scss']
 })
+
+
 export class ContentListComponent implements OnInit {
+  types: string[] = ["", "Comedy", "Child"];
+  authorSearchMessage = {
+    message: "",
+    found: false
+  };
 
   cartooncharacters:Content[];
 
@@ -78,6 +85,16 @@ export class ContentListComponent implements OnInit {
   }
 
   ngOnInit(): void {
+  }
+  checkForAuthorInList(authorNameValue: string): void {
+    if (this.cartooncharacters.some(player => player.author === authorNameValue)) {
+      this.authorSearchMessage.message = "Author Found";
+      this.authorSearchMessage.found = true;
+    }
+    else {
+      this.authorSearchMessage.message = "Author Not Found";
+      this.authorSearchMessage.found = false;
+    }
   }
 
 }
