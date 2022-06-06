@@ -23,7 +23,7 @@ export class ContentListComponent implements OnInit {
       title: 'Shinchan',
       body: ' Shin-chan follows the journey of five-year-old, Shinnosuke "Shin" Nohara and his family, his pet dog Shiro, neighbours, and friends in Kasukabe, Japan.',
       author: 'Yoshito Usui',
-      imagelink: 'https://images-na.ssl-images-amazon.com/images/I/71rVjwXc7LL._RI_.jpg',
+      // imagelink: '',
       type: 'Comedy',
       hashtag: ['Sinchan Nohara']
     },
