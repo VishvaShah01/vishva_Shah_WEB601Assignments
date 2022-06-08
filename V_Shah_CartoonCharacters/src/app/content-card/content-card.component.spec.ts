@@ -2,6 +2,7 @@ import { ComponentFixture, TestBed } from '@angular/core/testing';
 
 import { ContentCardComponent } from './content-card.component';
 
+//import { HighlightImportantDataDirective } from '../highlight-important-data.directive';
 describe('ContentCardComponent', () => {
   let component: ContentCardComponent;
   let fixture: ComponentFixture<ContentCardComponent>;

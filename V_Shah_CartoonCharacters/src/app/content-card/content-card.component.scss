@@ -19,12 +19,14 @@
         width: 23em;
         border: 3px solid black;
     }
-    
+
     .type {
-        border-style: solid;
-        border-width: 3px;
-        background-color:lightgoldenrodyellow;
-        padding: 10px;
+        border: 2px solid green;
+        display: inline-block;
+        padding: 5px;
+        margin: 5px;
+        background-color: lightgoldenrodyellow;
+        color: black !important;
     }
     
     .author {
@@ -48,5 +50,6 @@
     
     &.is-odd{
        background-color: rgb(255, 255, 255);
-       }
+       
+    }
 }
