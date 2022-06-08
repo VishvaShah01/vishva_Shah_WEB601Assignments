@@ -16,12 +16,29 @@ export class HighlightImportantDataDirective {
   
   constructor(private el: ElementRef) {
     this.colorText = this.el.nativeElement.style.border;
+    this.colorText = this.el.nativeElement.style.backgroundColor;
   }
 
-  @HostListener('mouseenter') onclick() {
+   @HostListener('mouseenter') onclick() {
     this.colorHighLight = !this.colorHighLight;
+  } 
+
+  @HostBinding('style.backgroundColor')
+  get backgroundColor() {
+    return this.colorHighLight ? this.color || "transparent" :
+      this.colorText;
   }
   @HostListener('mouseout') onClick() {
     this.colorHighLight = !this.colorHighLight;
   }
-}
+
+  /* @HostBinding('style.border')
+  get border() {
+    return this.highlight ? '3px solid black' : this.initialBorder;
+  } */
+
+  
+  @HostListener('click') onClickType() {
+    this.colorHighLight = !this.colorHighLight;
+  }
+} 
