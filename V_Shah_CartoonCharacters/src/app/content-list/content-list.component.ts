@@ -1,5 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { Content } from '../models/content';
+import {CartoonService} from '../cartoon.service';
+
 
 @Component({
   selector: 'app-content-list',
@@ -17,12 +19,15 @@ export class ContentListComponent implements OnInit {
 
   cartooncharacters:Content[];
 
-  constructor() { 
+  constructor(private cartoonService: CartoonService) { 
     this.cartooncharacters = [];
   }
 
   ngOnInit(): void {
+    this.cartoonService
+      .getCartoons()
   }
+
   checkForAuthorInList(authorNameValue: string): void {
     if (this.cartooncharacters.some(player => player.author === authorNameValue)) {
       this.authorSearchMessage.message = "Author Found";
