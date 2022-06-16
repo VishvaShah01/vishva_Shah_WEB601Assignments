@@ -1,6 +1,8 @@
 import { Component } from '@angular/core';
 import {Content} from './models/content';
 //import {List} from './models/list'
+import {CartoonService} from '../app/cartoon.service';
+
 @Component({
   selector: 'app-root',
   templateUrl: './app.component.html',
@@ -8,4 +10,18 @@ import {Content} from './models/content';
 })
 export class AppComponent {
   title = 'V_Shah_CartoonCharacters';
+  searchCartoon: Content[];
+
+  public id: any;
+  constructor(private cartoonService: CartoonService) {
+    this.searchCartoon = [];
+  }
+
+  ngOnInit(): void {}
+
+  searchCartoonById(id: any) {
+    this.cartoonService
+      .getCartoonData(id)
+      .subscribe((cartoons) => (this.searchCartoon = cartoons));
+  }
 }
