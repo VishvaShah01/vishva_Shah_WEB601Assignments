@@ -18,12 +18,16 @@ export class CartoonService {
 
   //A method that accepts a number and returns the content item in the array that contains the same id as the number parameter
   //insert data
-  getCartoonData(id: Number): Observable<Content[]> {
-    var printCartoon = cartooncharacters.filter((cartoons) => {
-      console.log(cartoons.id, id);
-      return cartoons.id == id;
-    });
-    return of(printCartoon);
+  getCartoonData(id: Number): Observable<Content> {
+    for (var i = 0; i < cartooncharacters.length; i++) {
+      if (cartooncharacters[i].id === id) {
+        console.log(cartooncharacters[i])
+        return of(cartooncharacters[i]);
+      }
+  
+    }
+    console.log(cartooncharacters)
+    return of(cartooncharacters[i]);
   }
 
   //A method that accepts a Content item as an input, adds the item to the array, and returns the array after the item is added

@@ -23,6 +23,6 @@ export class ContentDataComponent implements OnInit {
   searchCartoonById(id: any) {
     this.cartoonService
       .getCartoonData(id)
-      .subscribe((cartoons) => (this.searchCartoon = cartoons));
+      .subscribe((cartoons) => (this.searchCartoon[id] = cartoons));
   }
 }

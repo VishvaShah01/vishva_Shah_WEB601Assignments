@@ -1,1 +1,25 @@
-<p>content-detail works!</p>
+<!--<p>content-detail works!</p>-->
+
+<ng-container >
+    <h2 *ngIf="cartoon && cartoon.title else elseBlockNameIsWhateverYouWant" class="title">
+     Cartoon Title:   {{cartoon?.title }}
+    </h2>
+    
+    <ng-template #elseBlockNameIsWhateverYouWant>
+      <img [src]="'https://images-na.ssl-images-amazon.com/images/I/71rVjwXc7LL._RI_.jpg'">
+    </ng-template>
+    
+    <img *ngIf="cartoon && cartoon.imagelink else elseBlockNameIsWhateverYouWant" [src]="cartoon.imagelink">
+    <p class="body" *ngIf="cartoon && cartoon.body; else elseBlockNameIsWhateverYouWant">
+    Body:    {{cartoon?.body}}
+    </p>
+    
+    <div class="type"  *ngIf="cartoon && cartoon.type" appHighLightImportantData>
+    Type:    {{cartoon?.type}}
+    </div>
+
+    <ng-template #elseBlockNameIsWhateverYouWant>
+        <p class="nothing-found">Nothing to show</p>
+        </ng-template>
+    
+  </ng-container>
