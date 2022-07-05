@@ -8,6 +8,7 @@ import { ContentCardComponent } from './content-card/content-card.component';
 import { CartoonsPipe } from './cartoons.pipe';
 import { HighlightImportantDataDirective } from './highlight-important-data.directive';
 import { ContentDataComponent } from './content-data/content-data.component';
+import { ContentDetailComponent } from './content-detail/content-detail.component';
 
 @NgModule({
   declarations: [
@@ -16,7 +17,8 @@ import { ContentDataComponent } from './content-data/content-data.component';
     ContentCardComponent,
     CartoonsPipe,
     HighlightImportantDataDirective,
-    ContentDataComponent
+    ContentDataComponent,
+    ContentDetailComponent
   ],
   imports: [
     BrowserModule,
