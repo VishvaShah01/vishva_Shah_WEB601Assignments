@@ -3,6 +3,7 @@ import { CommonModule } from '@angular/common';
 import { RouterModule, Routes } from '@angular/router';
 import { ContentListComponent } from './content-list/content-list.component';
 import { ContentDetailComponent } from './content-detail/content-detail.component';
+import { ContentSearchComponent } from './content-search/content-search.component';
 
 const routes: Routes = [
   //defualt
@@ -21,6 +22,10 @@ const routes: Routes = [
    {
     path: "detail/:id",
     component: ContentDetailComponent
+  }, 
+  {
+    path: "search",
+    component: ContentSearchComponent
   } 
 
 ];

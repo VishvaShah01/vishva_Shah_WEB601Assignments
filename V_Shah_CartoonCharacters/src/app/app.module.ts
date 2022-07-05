@@ -9,6 +9,7 @@ import { CartoonsPipe } from './cartoons.pipe';
 import { HighlightImportantDataDirective } from './highlight-important-data.directive';
 import { ContentDataComponent } from './content-data/content-data.component';
 import { ContentDetailComponent } from './content-detail/content-detail.component';
+import { ContentSearchComponent } from './content-search/content-search.component';
 
 @NgModule({
   declarations: [
@@ -18,7 +19,8 @@ import { ContentDetailComponent } from './content-detail/content-detail.componen
     CartoonsPipe,
     HighlightImportantDataDirective,
     ContentDataComponent,
-    ContentDetailComponent
+    ContentDetailComponent,
+    ContentSearchComponent
   ],
   imports: [
     BrowserModule,
