@@ -26,6 +26,7 @@ export class ContentListComponent implements OnInit {
   ngOnInit(): void {
     this.cartoonService
       .getCartoons()
+      .subscribe((cartoons) => (this.cartooncharacters = cartoons))
   }
 
   checkForAuthorInList(authorNameValue: string): void {

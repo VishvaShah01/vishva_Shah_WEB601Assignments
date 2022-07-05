@@ -1,24 +1,2 @@
-<app-content-list> </app-content-list>
+<router-outlet></router-outlet>
 
-<div>
-    <input
-      type="search"
-      #cartoonId
-      name="Search Cartoons"
-      id=""
-      placeholder="Enter Id of the Catoon"
-    />
-    <input
-      type="button"
-      value="Search Cartoons"
-      (click)="searchCartoonById(cartoonId.value)"
-    />
-  
-    <app-content-card
-      *ngFor="let item of searchCartoon"
-      [cartoon]="item"
-      class="CartoonIdSearch"
-    >
-    </app-content-card>
-    <br />
-</div>

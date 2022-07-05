@@ -10,18 +10,16 @@ import {CartoonService} from '../app/cartoon.service';
 })
 export class AppComponent {
   title = 'V_Shah_CartoonCharacters';
-  searchCartoon: Content[];
+  //searchCartoon: Content[];
 
   public id: any;
-  constructor(private cartoonService: CartoonService) {
-    this.searchCartoon = [];
+  //constructor(private cartoonService: CartoonService) {
+  //  this.searchCartoon = [];
+  //}
+
+  constructor() {
+
   }
 
   ngOnInit(): void {}
-
-  searchCartoonById(id: any) {
-    this.cartoonService
-      .getCartoonData(id)
-      .subscribe((cartoons) => (this.searchCartoon = cartoons));
-  }
 }
