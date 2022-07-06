@@ -1,5 +1,5 @@
 import { Injectable } from '@angular/core';
-import {cartooncharacters} from "../app/data/mock-cartoons";
+import {cartooncharacters, DEFAULTCARTOONCHARACTERS} from "../app/data/mock-cartoons";
 import {Content} from "../app/models/content";
 import {Observable, of} from "rxjs";
 
@@ -27,6 +27,7 @@ export class CartoonService {
   
     }
     console.log(cartooncharacters)
+    //return of(DEFAULTCARTOONCHARACTERS);
     return of(cartooncharacters[i]);
   }
 

@@ -1,4 +1,12 @@
 import {Content} from "../models/content";
+
+export const DEFAULTCARTOONCHARACTERS: Content = {
+  id: -1,
+  title: 'NOT FOUND',
+  author: "NOT VALID",
+  hashtag: [],
+  type: ""
+}
 export const cartooncharacters:Content[] = [{
     id: 0,
       title: 'Shinchan',

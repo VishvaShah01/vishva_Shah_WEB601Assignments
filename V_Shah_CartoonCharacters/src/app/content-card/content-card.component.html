@@ -5,7 +5,7 @@
 </h2>
 
 <ng-template #elseBlockNameIsWhateverYouWant>
-  <img [src]="'https://images-na.ssl-images-amazon.com/images/I/71rVjwXc7LL._RI_.jpg'">
+  <!--<img [src]="'https://images-na.ssl-images-amazon.com/images/I/71rVjwXc7LL._RI_.jpg'">-->
 </ng-template>
 
 <img *ngIf="cartoon && cartoon.imagelink else elseBlockNameIsWhateverYouWant" [src]="cartoon.imagelink" (click)="mycartoons()">

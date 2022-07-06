@@ -1,1 +1,12 @@
-<p>content-search works!</p>
+<!--<p>content-search works!</p>-->
+<div class="chess-search">
+    <label>
+      Chess Champion Search:
+      <input type="number" autofocus #idNumber>
+    </label>
+    <br>
+    <button (click)="checkForIdInList(idNumber.value)">Check for player at id</button>
+  </div>
+
+
+  <app-content-card [cartoon]="item"  ></app-content-card>  

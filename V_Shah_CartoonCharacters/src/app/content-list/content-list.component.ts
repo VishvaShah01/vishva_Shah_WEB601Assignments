@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, Optional } from '@angular/core';
 import { Content } from '../models/content';
 import {CartoonService} from '../cartoon.service';
 
@@ -16,6 +16,7 @@ export class ContentListComponent implements OnInit {
     message: "",
     found: false
   };
+  public  inputvalue?: Optional;
 
   cartooncharacters:Content[];
 
@@ -40,4 +41,33 @@ export class ContentListComponent implements OnInit {
     }
   }
 
+  clickEvent(inputvalue: any): any {
+  
+    // let i = 0;
+    //  return  console.log(inputvalue); 
+    for(let i = 0;  i < this.cartooncharacters.length; i++) {
+    // console.log(this.stockdata[i].author);
+
+      // console.log(author.author)
+      // console.log(inputvalue);
+      if(this.cartooncharacters[i].author == inputvalue){
+     let abj =  <HTMLInputElement>document.getElementById('aut');
+       //return 'we found the item with other';
+       abj.innerHTML = 'we found the item with other';
+      }
+      //   else{
+      //  let abj =  <HTMLInputElement>document.getElementById('aut');
+
+      //        abj.innerHTML = 'we can not find the other';
+      //   }
+    
+
+    }
+    let abj =  <HTMLInputElement>document.getElementById('aut');
+    if(!abj.innerHTML){
+             abj.innerHTML = 'we can not find the other';
+
+    }
+
+}
 }
