@@ -10,6 +10,7 @@ import { HighlightImportantDataDirective } from './highlight-important-data.dire
 import { ContentDataComponent } from './content-data/content-data.component';
 import { ContentDetailComponent } from './content-detail/content-detail.component';
 import { ContentSearchComponent } from './content-search/content-search.component';
+import { InvalidLinkComponent } from './invalid-link/invalid-link.component';
 
 @NgModule({
   declarations: [
@@ -20,7 +21,8 @@ import { ContentSearchComponent } from './content-search/content-search.componen
     HighlightImportantDataDirective,
     ContentDataComponent,
     ContentDetailComponent,
-    ContentSearchComponent
+    ContentSearchComponent,
+    InvalidLinkComponent
   ],
   imports: [
     BrowserModule,
