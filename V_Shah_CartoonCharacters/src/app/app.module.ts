@@ -11,6 +11,7 @@ import { ContentDataComponent } from './content-data/content-data.component';
 import { ContentDetailComponent } from './content-detail/content-detail.component';
 import { ContentSearchComponent } from './content-search/content-search.component';
 import { InvalidLinkComponent } from './invalid-link/invalid-link.component';
+import { NavBarDataComponent } from './nav-bar-data/nav-bar-data.component';
 
 @NgModule({
   declarations: [
@@ -22,7 +23,8 @@ import { InvalidLinkComponent } from './invalid-link/invalid-link.component';
     ContentDataComponent,
     ContentDetailComponent,
     ContentSearchComponent,
-    InvalidLinkComponent
+    InvalidLinkComponent,
+    NavBarDataComponent
   ],
   imports: [
     BrowserModule,
