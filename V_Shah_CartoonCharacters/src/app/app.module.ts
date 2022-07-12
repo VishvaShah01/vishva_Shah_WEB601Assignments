@@ -12,6 +12,10 @@ import { ContentDetailComponent } from './content-detail/content-detail.componen
 import { ContentSearchComponent } from './content-search/content-search.component';
 import { InvalidLinkComponent } from './invalid-link/invalid-link.component';
 import { NavBarDataComponent } from './nav-bar-data/nav-bar-data.component';
+import { HttpClientModule } from "@angular/common/http";
+import { InMemoryDataService } from "./services/in-memory-data.service";
+import { FormsModule } from '@angular/forms';
+
 
 @NgModule({
   declarations: [
@@ -24,11 +28,13 @@ import { NavBarDataComponent } from './nav-bar-data/nav-bar-data.component';
     ContentDetailComponent,
     ContentSearchComponent,
     InvalidLinkComponent,
-    NavBarDataComponent
+    NavBarDataComponent,
+    InMemoryDataService
   ],
   imports: [
     BrowserModule,
-    AppRoutingModule
+    AppRoutingModule,
+    FormsModule
   ],
   providers: [],
   bootstrap: [AppComponent]
