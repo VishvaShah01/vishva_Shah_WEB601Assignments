@@ -14,6 +14,7 @@ import { InvalidLinkComponent } from './invalid-link/invalid-link.component';
 import { NavBarDataComponent } from './nav-bar-data/nav-bar-data.component';
 import { HttpClientModule } from "@angular/common/http";
 import { InMemoryDataService } from "./services/in-memory-data.service";
+import { HttpClientInMemoryWebApiModule } from 'angular-in-memory-web-api';
 import { FormsModule } from '@angular/forms';
 
 
@@ -28,13 +29,18 @@ import { FormsModule } from '@angular/forms';
     ContentDetailComponent,
     ContentSearchComponent,
     InvalidLinkComponent,
-    NavBarDataComponent,
-    InMemoryDataService
+    NavBarDataComponent
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
-    FormsModule
+    FormsModule,
+    HttpClientModule,
+    HttpClientInMemoryWebApiModule.forRoot(
+      InMemoryDataService, {
+      delay: 1000,
+    }),
+
   ],
   providers: [],
   bootstrap: [AppComponent]
