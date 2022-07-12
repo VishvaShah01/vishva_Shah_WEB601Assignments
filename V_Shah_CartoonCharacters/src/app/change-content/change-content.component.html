@@ -1,1 +1,25 @@
-<p>change-content works!</p>
+<!-- <p>change-content works!</p> -->
+<h1> you are going to add new content</h1>
+  <label>
+    title:
+    <input [(ngModel)]="cartoonItem.title">
+  </label><br>
+  <label>
+    body:
+    <input [(ngModel)]="cartoonItem.body">
+  </label><br>
+  <label>
+    author:
+    <input [(ngModel)]="cartoonItem.author">
+  </label><br>
+  <label>
+    imagelink:
+    <input [(ngModel)]="cartoonItem.imagelink">
+  </label><br>
+  <label>
+    Tags:
+    <input [(ngModel)]="tempTags">
+  </label>
+  <button (click)="addContentToServer()">
+    Add new content
+  </button>
