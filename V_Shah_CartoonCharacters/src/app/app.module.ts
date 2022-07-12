@@ -16,6 +16,7 @@ import { HttpClientModule } from "@angular/common/http";
 import { InMemoryDataService } from "./services/in-memory-data.service";
 import { HttpClientInMemoryWebApiModule } from 'angular-in-memory-web-api';
 import { FormsModule } from '@angular/forms';
+import { ChangeContentComponent } from './change-content/change-content.component';
 
 
 @NgModule({
@@ -29,7 +30,8 @@ import { FormsModule } from '@angular/forms';
     ContentDetailComponent,
     ContentSearchComponent,
     InvalidLinkComponent,
-    NavBarDataComponent
+    NavBarDataComponent,
+    ChangeContentComponent
   ],
   imports: [
     BrowserModule,

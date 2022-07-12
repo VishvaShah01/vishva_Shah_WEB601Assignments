@@ -5,6 +5,7 @@ import { ContentListComponent } from './content-list/content-list.component';
 import { ContentDetailComponent } from './content-detail/content-detail.component';
 import { ContentSearchComponent } from './content-search/content-search.component';
 import { InvalidLinkComponent } from './invalid-link/invalid-link.component';
+import { ChangeContentComponent } from './change-content/change-content.component';
 
 const routes: Routes = [
   //defualt
@@ -27,6 +28,10 @@ const routes: Routes = [
   {
     path: "search",
     component: ContentSearchComponent
+  },
+  {
+    path: "addContent",
+    component: ChangeContentComponent
   },
   {
     path: "**",
