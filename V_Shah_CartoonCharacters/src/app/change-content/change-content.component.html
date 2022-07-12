@@ -1,5 +1,10 @@
 <!-- <p>change-content works!</p> -->
 <h1> you are going to add new content</h1>
+
+<label>
+    ID (for updating):
+    <input type="number" [(ngModel)]="cartoonItem.id">
+  </label>
   <label>
     title:
     <input [(ngModel)]="cartoonItem.title">
@@ -20,6 +25,6 @@
     Tags:
     <input [(ngModel)]="tempTags">
   </label>
-  <button (click)="addContentToServer()">
+  <button (click)="+(cartoonItem.id || 'falsy') ? updateContentOnServer(): addContentToServer() ">
     Add new content
   </button>

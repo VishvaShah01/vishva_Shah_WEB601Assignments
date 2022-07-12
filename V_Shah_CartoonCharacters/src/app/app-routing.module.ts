@@ -34,6 +34,10 @@ const routes: Routes = [
     component: ChangeContentComponent
   },
   {
+    path: "updateContent/:id",
+    component: ChangeContentComponent
+  },
+  {
     path: "**",
     component: InvalidLinkComponent
   } 

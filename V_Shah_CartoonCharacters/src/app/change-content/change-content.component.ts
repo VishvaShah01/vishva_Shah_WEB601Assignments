@@ -31,4 +31,12 @@ export class ChangeContentComponent implements OnInit {
         console.log("Success! New content added", newContentFromServer)
       );
   }
+  updateContentOnServer(): void {
+    this.cartoonItem.hashtag = this.tempTags.split(", ");
+    this.cartoonService.updateCartoonData(this.cartoonItem)
+      .subscribe(() =>
+        console.log("Content updated successfully", this.cartoonItem)
+      );
+  }
+
 }
