@@ -1,6 +1,8 @@
 import { Component, OnInit } from '@angular/core';
 import {Content} from "../models/content";
 import { CartoonService } from '../cartoon.service';
+import { ActivatedRoute, Router } from '@angular/router';
+import { cartooncharacters } from '../data/mock-cartoons';
 
 @Component({
   selector: 'app-change-content',
@@ -19,10 +21,22 @@ export class ChangeContentComponent implements OnInit {
   };
   tempTags: string = '';
   
-  constructor(private cartoonService: CartoonService) { }
+  constructor(private cartoonService: CartoonService,private route: ActivatedRoute) { }
 
   ngOnInit(): void {
+    var id = this.route.snapshot.paramMap.get('id');
+
+    if (id) {
+      var cartoonItem = this.cartoonService
+        .getCartoonData(Number(id))
+        .subscribe((cartoonItem) => {
+          if (cartoonItem && id) {
+            this.cartoonItem = { ...this.cartoonItem };
+            console.log(cartoonItem);
+          }
+        });
   }
+}
 
   addContentToServer(): void {
     this.cartoonItem.hashtag = this.tempTags.split(", ");
