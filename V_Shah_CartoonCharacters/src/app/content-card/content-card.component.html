@@ -1,18 +1,61 @@
-<h2 *ngIf="cartoon && cartoon.title else elseBlockNameIsWhateverYouWant" appHighlightImportantData [color]="'white'">
-    {{cartoon?.title }}
-</h2>
+<!-- <input type="text" />
+<button  clickEvent()>Click me!</button> -->
 
-<ng-template #elseBlockNameIsWhateverYouWant>
-  <img [src]="'https://images-na.ssl-images-amazon.com/images/I/71rVjwXc7LL._RI_.jpg'">
+<h2
+  *ngIf="cartoon && cartoon.title; else elseBlockNameIsWhateverYouWant"
+  appHighlightImportantData
+  [color]="'white'"
+>
+  {{ cartoon?.title }}
+</h2>
+<!-- <img *ngIf="cartoon" src="{{cartoon.imageUrl}}"> -->
+<img
+  *ngIf="cartoon && cartoon.imagelink; else elseBlock"
+  [src]="cartoon.imagelink"
+/>
+<p
+  class="body"
+  *ngIf="cartoon && cartoon.body; else elseBlockNameIsWhateverYouWant"
+>
+  {{ cartoon?.body }}
+</p>
+
+<div
+  class="type"
+  *ngIf="cartoon && cartoon.type; else elseBlockNameIsWhateverYouWant"
+  appHighlightImportantData
+  [highlightColor]="'2px solid black'"
+>
+  {{ cartoon?.type }}
+</div>
+<div
+  class="author"
+  *ngIf="cartoon && cartoon.author; else elseBlockNameIsWhateverYouWant"
+>
+  {{ cartoon?.author }}
+</div>
+<!-- <div class="hastags"  *ngIf="cartoon && cartoon.hashtags else elseBlockNameIsWhateverYouWant" appHighlightImportantData>{{cartoon?.hashtags}}</div> -->
+
+<div
+  class="hashtag"
+  *ngIf="cartoon && cartoon.hashtag; else elseBlockNameIsWhateverYouWant"
+>
+  <span
+    *ngFor="let hashtag of cartoon.hashtag"
+    appHighlightImportantData
+    [textcolor]="'black'"
+  >
+    #{{ hashtag }}
+  </span>
+  <!-- <span>{{ chessPlayer.hashtags.replace(cp => "<span>" + cp + "</span>").join(" ")}}</span> -->
+</div>
+
+<ng-template #elseBlock>
+  <!-- <p class="not-found"></p> -->
+  <!-- <img src="https://images.newindianexpress.com/uploads/user/imagelibrary/2021/9/6/w900X450/Bombay_Stock_exchange-PTI.jpg?w=400&dpr=2.6" alt=""> -->
+  <img [src]="'assets/images/stockmarket.jpg'" alt="" />
 </ng-template>
 
-<img *ngIf="cartoon && cartoon.imagelink else elseBlockNameIsWhateverYouWant" [src]="cartoon.imagelink" (click)="mycartoons()">
-<p class="body" *ngIf="cartoon && cartoon.body; else elseBlockNameIsWhateverYouWant">{{cartoon?.body}}</p>
-
-<div class="type"  *ngIf="cartoon && cartoon.type" appHighLightImportantData>{{cartoon?.type}}</div>
-<div class="author"  *ngIf="cartoon && cartoon.author else elseBlockNameIsWhateverYouWant">{{cartoon?.author}}</div>
-<div class="hashtag"  *ngIf="cartoon && cartoon.hashtag else elseBlockNameIsWhateverYouWant" appHighLightImportantData>{{cartoon?.hashtag}}</div>
-
 <ng-template #elseBlockNameIsWhateverYouWant>
-<p class="nothing-found">Nothing to show</p>
+  <p>not found</p>
 </ng-template>
