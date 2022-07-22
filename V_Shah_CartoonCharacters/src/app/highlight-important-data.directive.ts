@@ -1,44 +1,64 @@
-//import { Directive } from '@angular/core';
 import {Directive, ElementRef, HostBinding, HostListener, Input } from '@angular/core';
 
 @Directive({
   selector: '[appHighlightImportantData]'
 })
 export class HighlightImportantDataDirective {
-  @Input() color?: string;
-  private colorHighLight: boolean = false;
-  private colorText: string;
- 
-  @HostBinding('style.border')
-  get border() {
-    return this.colorHighLight ? '2px double black' : this.colorText;
-  }
-  
-  constructor(private el: ElementRef) {
-    this.colorText = this.el.nativeElement.style.border;
-    this.colorText = this.el.nativeElement.style.backgroundColor;
-  }
 
-   @HostListener('mouseenter') onclick() {
-    this.colorHighLight = !this.colorHighLight;
-  } 
+  private defaultColor:string="";  
+  @Input() highlightColor:string=""; 
+   
+  @Input()color:string="";
+
+  //private defaulttextcolor:string="";
+  @Input() textcolor:string="";
+
+
+  private isHighlighted: boolean = false;
+  private initialColour: string;
+ // private initialTextColor: string;
+
+
 
   @HostBinding('style.backgroundColor')
-  get backgroundColor() {
-    return this.colorHighLight ? this.color || "transparent" :
-      this.colorText;
+  get backgroundColour() {
+    return this.isHighlighted ? this.color || "" :
+      this.initialColour;
   }
-  @HostListener('mouseout') onClick() {
-    this.colorHighLight = !this.colorHighLight;
+  @HostBinding('style.color')
+  get textColour() {
+    return this.isHighlighted;
   }
 
-  /* @HostBinding('style.border')
-  get border() {
-    return this.highlight ? '3px solid black' : this.initialBorder;
-  } */
 
   
-  @HostListener('click') onClickType() {
-    this.colorHighLight = !this.colorHighLight;
+  constructor(private elm: ElementRef) {
+    this.initialColour = this.elm.nativeElement.style.backgroundColor;
+
   }
-} 
+
+  @HostListener('click') onClick() {
+    this.isHighlighted = !this.isHighlighted;
+  }
+
+
+   
+@HostBinding('style.border') border:string=this.defaultColor;  
+@HostBinding('style.color') tagcolor:string=this.defaultColor; 
+ 
+  // constructor( private eleRef:ElementRef){}  
+  
+  @HostListener('mouseover') mouseover(eventData:Event){  
+      this.border=this.highlightColor;  
+      this.tagcolor=this.textcolor;
+  
+  }  
+  @HostListener('mouseleave') mouseleave(eventData:Event){  
+      this.border=this.defaultColor;  
+      this.tagcolor=this.defaultColor;
+      //this.eleRef.nativeElement.style.color="Black";  
+  } 
+
+
+
+}
