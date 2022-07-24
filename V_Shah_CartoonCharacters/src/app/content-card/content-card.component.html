@@ -1,21 +1,34 @@
 <!--<a [routerLink]="['/detail', cartoon?.id]" routerLinkActive="active"></a>-->
+<mat-card class="card-data">
+  <mat-card-header>
+    <mat-card-title>
+      <mat-card-actions>
+        <h2 *ngIf="cartoon && cartoon.title else elseBlockNameIsWhateverYouWant" appHighlightImportantData [color]="'grey'" [routerLink] = "['/detail', cartoon.id ]" routerLinkActive="active">
+            {{cartoon?.title }}
+        </h2>
+      </mat-card-actions>
+    </mat-card-title>
 
-<h2 *ngIf="cartoon && cartoon.title else elseBlockNameIsWhateverYouWant" appHighlightImportantData [color]="'white'" [routerLink] = "['/detail', cartoon.id ]" routerLinkActive="active">
-    {{cartoon?.title }}
-</h2>
+    <mat-card-subtitle>
+      <ng-template #elseBlockNameIsWhateverYouWant>
+        <!--<img [src]="'https://images-na.ssl-images-amazon.com/images/I/71rVjwXc7LL._RI_.jpg'">-->
+      </ng-template>
 
-<ng-template #elseBlockNameIsWhateverYouWant>
-  <!--<img [src]="'https://images-na.ssl-images-amazon.com/images/I/71rVjwXc7LL._RI_.jpg'">-->
-</ng-template>
+      <img *ngIf="cartoon && cartoon.imagelink else elseBlockNameIsWhateverYouWant" [src]="cartoon.imagelink" (click)="mycartoons()">
+      <!--<p class="body" *ngIf="cartoon && cartoon.body; else elseBlockNameIsWhateverYouWant">{{cartoon?.body}}</p>-->
 
-<img *ngIf="cartoon && cartoon.imagelink else elseBlockNameIsWhateverYouWant" [src]="cartoon.imagelink" (click)="mycartoons()">
-<!--<p class="body" *ngIf="cartoon && cartoon.body; else elseBlockNameIsWhateverYouWant">{{cartoon?.body}}</p>-->
 
-<div class="type"  *ngIf="cartoon && cartoon.type" appHighLightImportantData>{{cartoon?.type}}</div>
-<!--<div class="author"  *ngIf="cartoon && cartoon.author else elseBlockNameIsWhateverYouWant">{{cartoon?.author}}</div>-->
-<div class="hashtag"  *ngIf="cartoon && cartoon.hashtag else elseBlockNameIsWhateverYouWant" appHighLightImportantData>#{{cartoon?.hashtag}}</div>
+        <div class="type"  *ngIf="cartoon && cartoon.type" appHighLightImportantData>{{cartoon?.type}}</div>
+    </mat-card-subtitle>
+  </mat-card-header>
 
-<ng-template #elseBlockNameIsWhateverYouWant>
-<p class="nothing-found">Nothing to show</p>
-</ng-template>
+  <!--<div class="author"  *ngIf="cartoon && cartoon.author else elseBlockNameIsWhateverYouWant">{{cartoon?.author}}</div>-->
+  <mat-card-content>
+    <div class="hashtag"  *ngIf="cartoon && cartoon.hashtag else elseBlockNameIsWhateverYouWant" appHighLightImportantData>#{{cartoon?.hashtag}}</div>
+
+    <ng-template #elseBlockNameIsWhateverYouWant>
+    <p class="nothing-found">Nothing to show</p>
+    </ng-template>
+  </mat-card-content>
+</mat-card>
 
