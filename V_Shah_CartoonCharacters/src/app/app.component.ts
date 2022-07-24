@@ -6,7 +6,7 @@ import {CartoonService} from '../app/cartoon.service';
 @Component({
   selector: 'app-root',
   templateUrl: './app.component.html',
-  styleUrls: ['./app.component.css']
+  styleUrls: ['./app.component.scss']
 })
 export class AppComponent {
   title = 'V_Shah_CartoonCharacters';

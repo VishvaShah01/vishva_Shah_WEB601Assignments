@@ -5,7 +5,7 @@ import { Content } from '../models/content';
 @Component({
   selector: 'app-content-data',
   templateUrl: './content-data.component.html',
-  styleUrls: ['./content-data.component.css']
+  styleUrls: ['./content-data.component.scss']
 })
 export class ContentDataComponent implements OnInit {
   searchCartoon: Content[];

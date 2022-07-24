@@ -6,7 +6,7 @@ import {Content} from "../models/content";
 @Component({
   selector: 'app-content-search',
   templateUrl: './content-search.component.html',
-  styleUrls: ['./content-search.component.css']
+  styleUrls: ['./content-search.component.scss']
 })
 export class ContentSearchComponent implements OnInit {
 
