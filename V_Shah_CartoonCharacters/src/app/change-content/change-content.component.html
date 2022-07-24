@@ -1,30 +1,40 @@
 <!-- <p>change-content works!</p> -->
-<h1> you are going to add new content</h1>
+<h1> You are going to Add new content</h1>
 
-<label>
-    ID (for updating):
-    <input type="number" [(ngModel)]="cartoonItem.id">
-  </label>
-  <label>
-    title:
-    <input [(ngModel)]="cartoonItem.title">
-  </label><br>
-  <label>
-    body:
-    <input [(ngModel)]="cartoonItem.body">
-  </label><br>
-  <label>
-    author:
-    <input [(ngModel)]="cartoonItem.author">
-  </label><br>
-  <label>
-    imagelink:
-    <input [(ngModel)]="cartoonItem.imagelink">
-  </label><br>
-  <label>
-    Tags:
-    <input [(ngModel)]="tempTags">
-  </label>
-  <button (click)="+(cartoonItem.id || 'falsy') ? updateContentOnServer(): addContentToServer() ">
+<mat-form-field color="primary" appearance="fill">
+  <mat-label>ID (for updating)</mat-label>
+  <input matInput [(ngModel)]="cartoonItem.id">
+</mat-form-field>
+<mat-form-field color="primary" appearance="fill">
+  <mat-label for="title">TITLE</mat-label>
+  <input id="title" name="title" matInput [(ngModel)]="cartoonItem.title">
+</mat-form-field>
+
+<mat-form-field color="primary" appearance="fill">
+  <mat-label for="body">BODY</mat-label>
+  <input id="body" name="body" matInput [(ngModel)]="cartoonItem.body">
+</mat-form-field>
+
+<mat-form-field color="primary" appearance="fill">
+  <mat-label for="author">AUTHOR</mat-label>
+  <input id="author" name="author" matInput [(ngModel)]="cartoonItem.author">
+</mat-form-field>
+
+<mat-form-field color="primary" appearance="fill">
+  <mat-label for="imagelink">IMAGE LINK</mat-label>
+  <input id="imagelink" name="imagelink" matInput [(ngModel)]="cartoonItem.imagelink">
+</mat-form-field>
+
+<mat-form-field color="primary" appearance="fill">
+  <mat-label for="type">TYPE</mat-label>
+  <input id="type" name="type" matInput [(ngModel)]="cartoonItem.type">
+</mat-form-field>
+
+<mat-form-field color="primary" appearance="fill">
+  <mat-label for="hashtag">HASHTAGS</mat-label>
+  <input id="hashtag" name="hashtag" matInput [(ngModel)]="tempTags">
+</mat-form-field>
+
+  <button mat-raised-button color="primary"  (click)="+(cartoonItem.id || 'falsy') ? updateContentOnServer(): addContentToServer() ">
     Add new content
   </button>

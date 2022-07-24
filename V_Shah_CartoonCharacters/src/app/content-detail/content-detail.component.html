@@ -23,6 +23,6 @@
         </ng-template>
     
   </ng-container>
-  <a routerLink="/list/">Back to the list</a>
+  <a routerLink="/list/" mat-raised-button color="primary" >Back to the list</a>
   &nbsp;&nbsp;
-  <a [routerLink]="['/updateContent', cartoon?.id ?? 0]"> Update Content </a>
+  <a [routerLink]="['/updateContent', cartoon?.id ?? 0]" mat-raised-button color="primary" > Update Content </a>
