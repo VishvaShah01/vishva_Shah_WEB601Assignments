@@ -2,6 +2,7 @@ import { Component } from '@angular/core';
 import {Content} from './models/content';
 //import {List} from './models/list'
 import {CartoonService} from '../app/cartoon.service';
+import { LogUpdateService } from '../app/log-update.service';
 
 @Component({
   selector: 'app-root',
@@ -17,7 +18,7 @@ export class AppComponent {
   //  this.searchCartoon = [];
   //}
 
-  constructor() {
+  constructor(private logService: LogUpdateService) {
 
   }
 
